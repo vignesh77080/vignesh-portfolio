@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel='stylesheet' type='text/css' media='screen' href='portfolio.css'> 
 </head>
 <body>
@@ -18,22 +18,22 @@
             <img class='circle-logo' src='images\header-logo.jpg'>
         </div>
         <div class='head-one same'>
-           <h4 id='prof' onclick='myfunction(this.id)'>PROFILE</h4> 
+           <h4 class='prof' onclick='myfunction(this)'>PROFILE</h4> 
         </div>
         <div class='head-two  same'>
-            <h4 id='woo' onclick='myfunction(this.id)'>WORK</h4>
+            <h4 class='woo' onclick='myfunction(this)'>WORK</h4>
         </div>
         <div class='head-three same'>
-            <h4 id='pro' onclick='myfunction(this.id)'>PROJECTS</h4>
+            <h4 class='pro' onclick='myfunction(this)'>PROJECTS</h4>
         </div>
         <div class='head-four  same'>
-            <h4 id='con' onclick='myfunction(this.id)'>CONTACT</h4>
+            <h4 class='con' onclick='myfunction(this)'>CONTACT</h4>
         </div>
     </div>
 
     <!-- Profile part -->
 
-    <div class='profile-part prof active' >
+    <div id='prof' class='profile-part active' >
         <div class='pro-first-section'>
             <div class='first-half'>
                 <div class='empty'></div>
@@ -49,7 +49,7 @@
                 <!-- <img class='second-half' src='local work\profile-pic.JPG'> -->
             </div>
         </div>    
-        <div class='pro-second-section'>
+        <!-- <div class='pro-second-section'>
             <div class='one-edu'>
                 <h2>SSLC</h2>
                 <p>I have done my schooling in S.B.O.A Matriculation Higher Secondary School with 85.5% at the time of 2011-2012</p>
@@ -63,19 +63,60 @@
                     <p>I am graduated from Sri Krishna College of Technology in the branch of Electrical & Electronics Engineering
                         with 80.7% at the time of 2014-2018</p>
             </div>
-        </div>
+        </div> -->
+        <div class="pro-second-section">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                 <div class='one-edu'>
+                          <h2>SSLC</h2>
+                          <p>I have done my schooling in S.B.O.A Matriculation Higher Secondary School with 85.5% at the time of 2011-2012</p>
+                      </div>
+                </div>
+                <div class="item">
+                  <div class='sec-edu'>
+                              <h2>HSC</h2>
+                              <p>I have done HSC in S.B.O.A Matriculation Higher Secondary School with 80.5% at the time of 2013-2014</p>
+                      </div>
+                </div>
+                <div class="item">
+                  <div class='third-edu'>
+                              <h2>COLLEGE</h2>
+                              <p>I am graduated from Sri Krishna College of Technology in the branch of Electrical & Electronics Engineering
+                                  with 80.7% at the time of 2014-2018</p>
+                      </div>
+                </div>
+              </div>
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
         <div class="pro-third-section">
             <h1>To know more about me </h1>
             <p>Let see something </p>
-            <a class="works"  data-hover="check out my works">check out my works</a>
-            <a class="contact" data-hover="ping me a message">ping me a message</a>
+            <a class="woo" onclick='myfunction(this)' data-hover="check out my works">check out my works</a>
+            <a class="con" onclick='myfunction(this)' data-hover="ping me a message">ping me a message</a>
 
         </div>
     </div>
 
     <!-- work part -->
 
-    <div class='work-part woo' >
+    <div id='woo' class='work-part ' >
         <div class='work-one'>
             <h2>Objective</h2>
             <p>To succeed in an environment of growth and excellence where I can utilize my skills to
@@ -97,15 +138,15 @@
         <div class='wrk-last'>
             <h1>To know more about my works </h1>
             <p>Let see some more </p>
-            <a class='projects-tab' >check out my projects</a>
-            <a class='contact'>ping me a message</a>
+            <a class='pro' onclick='myfunction(this)' >check out my projects</a>
+            <a class='con' onclick='myfunction(this)'>ping me a message</a>
         </div>
     </div>
 
     <!-- project part -->
 
-    <div class='project-part pro'>
-        <span class='go-project'>Take me to the projects</span>
+    <div id='pro' class='project-part '>
+        <a href='#come-down' class='go-project'>Take me to the projects</a>
         <div class='project-one'>
             <div class='key-skill'>
                 <h2>Key-Skills</h2>
@@ -150,7 +191,7 @@
                 </span>
             </div>
         </div>
-        <div class='project-two'>
+        <div id='come-down' class='project-two'>
                 <div class='combine-first'>
                     <div class='first-one'>
                             <div class='front-side'>
@@ -198,7 +239,7 @@
         <div class='project-last'>
                 <h1> Liked my work ? </h1>
                 <p> If so or Not ? </p>
-                <a class='contact' data-hover="ping me a message">ping me a message</a>
+                <a class='con' onclick='myfunction(this)' data-hover="ping me a message">ping me a message</a>
                 <span class='span-last'> (For the better improvement)</span>
     
             </div>
@@ -206,7 +247,7 @@
 
     <!-- contact me -->
 
-    <div class='contact-part con'>
+    <div id='con' class='contact-part '>
         <div class='contact-one'>
                 <h1>Let’s talk </h1>
                 <p class='after_talk'> If you are interested in my work,<br> please feel free to contact me at </p>
@@ -243,17 +284,17 @@
             <span class="wb">(WEB DEVELOPER)</span>
         </div>
        <div class='head-menus'>
-        <div class='foot-one same-foot'>
-            <h4>PROFILE</h4> 
+        <div class='foot-one same-foot' >
+            <h4 class='prof' onclick='myfunction(this)'>PROFILE</h4> 
          </div>
          <div class='foot-two same-foot'>
-             <h4>WORK</h4>
+             <h4 class='woo' onclick='myfunction(this)'>WORK</h4>
          </div>
          <div class='foot-three same-foot'>
-             <h4>PROJECTS</h4>
+             <h4 class='pro' onclick='myfunction(this)'>PROJECTS</h4>
          </div>
          <div class='foot-four same-foot'>
-             <h4>CONTACT</h4>
+             <h4 class='con' onclick='myfunction(this)'>CONTACT</h4>
          </div>
        </div>
        <div class='social-menus'>
